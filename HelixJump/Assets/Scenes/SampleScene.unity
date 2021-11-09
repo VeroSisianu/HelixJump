@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 60056975}
   m_Layer: 0
   m_Name: FireBall
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,7 +273,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 10
   m_CollisionDetection: 0
 --- !u!114 &60056976
 MonoBehaviour:
@@ -368,6 +368,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5676588575540745739, guid: e0b11e6253b02e8458e1f5071751eda8, type: 3}
+--- !u!114 &313110611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313110606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f94858b4e16964fad865e88744152f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &318106093 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6310329695509497140, guid: 3bb7486dd80475c44ae5c250aa692969, type: 3}
@@ -519,6 +531,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5676588575540745739, guid: e0b11e6253b02e8458e1f5071751eda8, type: 3}
+--- !u!114 &688255382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688255377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f94858b4e16964fad865e88744152f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &717090501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -769,6 +793,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5676588575540745739, guid: e0b11e6253b02e8458e1f5071751eda8, type: 3}
+--- !u!114 &1038698913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038698908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f94858b4e16964fad865e88744152f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1080480144 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8177929135996638214, guid: 3bb7486dd80475c44ae5c250aa692969, type: 3}
@@ -1144,6 +1180,7 @@ GameObject:
   - component: {fileID: 1534941899}
   - component: {fileID: 1534941898}
   - component: {fileID: 1534941897}
+  - component: {fileID: 1534941900}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1210,12 +1247,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534941896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4, z: -10}
+  m_LocalPosition: {x: 0, y: 7.525, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1534941900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534941896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47397cc92d01f79488491c3bc913e6d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerTransform: {fileID: 60056974}
+  FallSpeed: 3.6
 --- !u!1 &1612561010 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1117197702548779522, guid: 3bb7486dd80475c44ae5c250aa692969, type: 3}
@@ -1311,6 +1362,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5676588575540745739, guid: e0b11e6253b02e8458e1f5071751eda8, type: 3}
+--- !u!114 &1667969445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667969440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f94858b4e16964fad865e88744152f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1889835525 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7882386266508553976, guid: 3bb7486dd80475c44ae5c250aa692969, type: 3}
