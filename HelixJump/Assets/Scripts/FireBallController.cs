@@ -25,9 +25,13 @@ public class FireBallController : MonoBehaviour
 
     void Update()
     {
-        if(_isFalling && StateManager.State == StateManager.States.Play)
+        if(StateManager.State == StateManager.States.Dead)
         {
-            transform.position += Vector3.down * Time.deltaTime * FallSpeed;
+            return;
+        }
+        if(_isFalling)
+        {
+            transform.position += Time.deltaTime * FallSpeed* Vector3.down;
         }
         else
         {
@@ -47,7 +51,7 @@ public class FireBallController : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("FinalGround"))
         {
             _isFalling = false;
             _beginningJumpPos = transform.position;

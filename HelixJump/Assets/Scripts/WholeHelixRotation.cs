@@ -9,7 +9,10 @@ public class WholeHelixRotation : MonoBehaviour
 
     void Update()
     {
-        CheckForInput();
+        if(StateManager.State == StateManager.States.Play)
+        {
+            CheckForInput();
+        }
     }
 
     private void CheckForInput()

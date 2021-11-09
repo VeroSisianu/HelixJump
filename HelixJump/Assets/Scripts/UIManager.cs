@@ -14,9 +14,9 @@ public class UIManager : MonoBehaviour
         {
             ScoreText.text = ScoreManager.CurrentScore.ToString();
         }
-        if(BestScoreText.text != "BEST : " + ScoreManager.BestScore)
+        if(BestScoreText.text != $"BEST : {ScoreManager.BestScore}")
         {
-            BestScoreText.text = "BEST : " + ScoreManager.BestScore;
+            BestScoreText.text = $"BEST : {ScoreManager.BestScore}";
         }
     }
 }

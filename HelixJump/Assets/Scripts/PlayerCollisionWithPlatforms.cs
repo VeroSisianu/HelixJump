@@ -20,6 +20,10 @@ public class PlayerCollisionWithPlatforms : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Obstacle"))
         {
+            StateManager.State = StateManager.States.Dead;
+        }
+        if (collision.gameObject.CompareTag("FinalGround") && StateManager.State != StateManager.States.End)
+        {
             StateManager.State = StateManager.States.End;
         }
     }

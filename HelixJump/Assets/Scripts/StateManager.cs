@@ -7,7 +7,7 @@ public class StateManager : MonoBehaviour
     public static States State;
     public enum States
     {
-        Play, End
+        Play, End, Dead
     }
     private void Awake()
     {
