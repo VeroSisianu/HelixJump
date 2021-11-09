@@ -33,7 +33,7 @@ public class PlatformDestroy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Ground"))
+        if (other.gameObject.CompareTag("FinalGround"))
         {
             Destroy(gameObject);
         }

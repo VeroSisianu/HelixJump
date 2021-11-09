@@ -10,6 +10,11 @@ public class PlayerCollisionWithPlatforms : MonoBehaviour
         {
             ScoreManager.CurrentScore += ScoreManager.PointsToScore;
             ScoreManager.PointsToScore += 10;
+            var arrOfColliders = other.gameObject.transform.parent.GetComponentsInChildren<MeshCollider>(false);
+            foreach(var i in arrOfColliders)
+            {
+                i.isTrigger = true;
+            }
         }
     }
     private void OnCollisionEnter(Collision collision)

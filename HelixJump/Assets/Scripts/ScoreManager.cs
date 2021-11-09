@@ -5,7 +5,7 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     public static int CurrentScore;
-    public static int PointsToScore;
+    public static int PointsToScore = 10;
     public static int BestScore;
     void Update()
     {
