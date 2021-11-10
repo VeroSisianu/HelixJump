@@ -20,24 +20,29 @@ public class FireBallController : MonoBehaviour
     private MeshRenderer _fireBallRenderer;
     private Color _fastColor;
     private Color _originalColor;
-
+    private ParticleSystem FX_Fire;
     void Start()
     {
         _originalScale = transform.localScale;
         _originalColor = GetComponent<MeshRenderer>().material.color;
         _fireBallRenderer = GetComponent<MeshRenderer>();
         _fastColor = Color.magenta;
+        FX_Fire = GetComponentInChildren<ParticleSystem>(true);
     }
 
     void Update()
     {
-        if (ScoreManager.PointsToScore <30 && _fireBallRenderer.material.color != _originalColor)
+        if (ScoreManager.PointsToScore < 30 && _fireBallRenderer.material.color != _originalColor)
         {
             _fireBallRenderer.material.color = _originalColor;
+            FX_Fire.gameObject.SetActive(false);
+            FallSpeed -= 1.5f;
         }
         else if (ScoreManager.PointsToScore >= 30 && _fireBallRenderer.material.color != _fastColor)
         {
             _fireBallRenderer.material.color = _fastColor;
+            FX_Fire.gameObject.SetActive(true);
+            FallSpeed += 1.5f;
         }
         //if (Input.GetKeyDown(KeyCode.Space))
         //    Time.timeScale = 0.5f;

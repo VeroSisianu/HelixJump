@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_GoodPlatform
+  m_Name: M_BadPlatform
   m_Shader: {fileID: 4800000, guid: 81ae609a37b59f043ac4256abae11b2e, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -72,16 +72,16 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _RimMax: 1
-    - _RimMin: 0
+    - _RimMin: 0.315
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0, g: 0.46694744, b: 0.7294118, a: 1}
+    - _Color: {r: 0.8301887, g: 0.24118549, b: 0.16838734, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
-    - _RimColor: {r: 0, g: 0.4666667, b: 0.7294118, a: 0.6}
+    - _RimColor: {r: 0.16470589, g: 0.047058824, b: 0, a: 1}
     - _SColor: {r: 0.254717, g: 0.254717, b: 0.254717, a: 1}
   m_BuildTextureStacks: []

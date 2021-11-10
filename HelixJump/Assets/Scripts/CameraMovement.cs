@@ -16,5 +16,13 @@ public class CameraMovement : MonoBehaviour
         { 
             transform.position += Vector3.down * Time.deltaTime * FallSpeed;
         }
+        if(ScoreManager.PointsToScore >= 30)
+        {
+            FallSpeed = 4.6f;
+        }
+        else
+        {
+            FallSpeed = 3.6f;
+        }
     }
 }
