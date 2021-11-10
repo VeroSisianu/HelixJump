@@ -10,7 +10,9 @@ public class CameraMovement : MonoBehaviour
     
     void Update()
     {
-        if (PlayerTransform.position.y < transform.position.y)
+        if (StateManager.State == StateManager.States.End || StateManager.State == StateManager.States.Dead)
+            return;
+        if (PlayerTransform.position.y < transform.position.y - 2)
         { 
             transform.position += Vector3.down * Time.deltaTime * FallSpeed;
         }

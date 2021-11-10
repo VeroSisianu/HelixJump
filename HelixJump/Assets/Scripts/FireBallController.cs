@@ -42,7 +42,6 @@ public class FireBallController : MonoBehaviour
             if (transform.position.y >= _finalYJumpPosition)
             {
                 _isFalling = true;
-                Debug.Log("set isfalling to true");
             }
             if (transform.position.y >= _finalYJumpPosition - 1f)
             {
@@ -58,7 +57,6 @@ public class FireBallController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("FinalGround") && _isFalling)
         {
-            Debug.Log("set isfalling to false on collision");
             _isFalling = false;
             _beginningJumpPos = transform.position;
             _finalYJumpPosition = _beginningJumpPos.y + JumpHeight;

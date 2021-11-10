@@ -13,7 +13,8 @@ public class UIManager : MonoBehaviour
     float _finalPos = -15f;
     float _fullDistanceToFinalGround;
     float _pastSliderValue = 0;
-
+    public Image NextLevelCircle;
+    public Image CurrentLevelCircle;
 
     private void Start()
     {
@@ -39,5 +40,9 @@ public class UIManager : MonoBehaviour
             PercentsSlider.value = _sliderValue;
         }
         _pastSliderValue = PercentsSlider.value;
+        if(_pastSliderValue>=99.5f)
+        {
+            NextLevelCircle.color = CurrentLevelCircle.color;
+        }
     }
 }
