@@ -14,4 +14,10 @@ public class ScoreManager : MonoBehaviour
             BestScore = CurrentScore;
         }
     }
+
+    private void Start()
+    {
+        CurrentScore = 0;
+        PointsToScore = 10;
+    }
 }

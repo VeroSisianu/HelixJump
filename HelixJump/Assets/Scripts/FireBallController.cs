@@ -17,21 +17,43 @@ public class FireBallController : MonoBehaviour
     private Vector3 _scaleOnCollision = new Vector3(1.3f, 0.63f, 0.8f);
     private Vector3 _verticalScaleAfterCollision = new Vector3(0.63f, 1.3f, 0.8f);
     private Vector3 _originalScale;
+    private MeshRenderer _fireBallRenderer;
+    private Color _fastColor;
+    private Color _originalColor;
 
     void Start()
     {
         _originalScale = transform.localScale;
+        _originalColor = GetComponent<MeshRenderer>().material.color;
+        _fireBallRenderer = GetComponent<MeshRenderer>();
+        _fastColor = Color.magenta;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-            Time.timeScale = 0.5f;
-        if (Input.GetKeyDown(KeyCode.Tab))
-            Time.timeScale = 1;
-        if(StateManager.State == StateManager.States.Dead)
+        if (ScoreManager.PointsToScore <30 && _fireBallRenderer.material.color != _originalColor)
         {
+            _fireBallRenderer.material.color = _originalColor;
+        }
+        else if (ScoreManager.PointsToScore >= 30 && _fireBallRenderer.material.color != _fastColor)
+        {
+            _fireBallRenderer.material.color = _fastColor;
+        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //    Time.timeScale = 0.5f;
+        //if (Input.GetKeyDown(KeyCode.Tab))
+        //    Time.timeScale = 1;
+        if (StateManager.State == StateManager.States.Dead)
+        {
+            if(_fireBallRenderer.material.color != _originalColor)
+            {
+                _fireBallRenderer.material.color = _originalColor;
+            }
             return;
+        }
+        if (StateManager.State == StateManager.States.End && _fireBallRenderer.material.color != _originalColor)
+        {
+            _fireBallRenderer.material.color = _originalColor;
         }
         if (_isFalling)
         {
